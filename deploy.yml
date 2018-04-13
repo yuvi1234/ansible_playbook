@@ -14,14 +14,14 @@
     - name: remove files in a directory
       file: 
         path: /tmp/gamefolder/
-	state: absent
+        state: absent
       when: abc.stat.exists
 
     - name: copy war file 
       copy: 
         src: "{{ workspace }}/gameoflife-0.0.1.war"
         dest: "/tmp/gamefolder"
-	
+
      - name: executing war
        shell: java -jar /tmp/gamefolder/gameoflife-0.0.1.war
        become: true
