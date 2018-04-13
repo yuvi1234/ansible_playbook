@@ -6,15 +6,10 @@
         path: /tmp/gamefolder
         state: directory
 
-    - name: remove files in a directory
-      file: 
-        path: /tmp/gamefolder/
-        state: absent
-
     - name: copy war file 
       copy: 
         src: "{{ workspace }}/gameoflife-0.0.1.war"
-        dest: "/tmp/gamefolder"
+        dest: "/tmp/gamefolder/gameoflife-0.0.1.war"
 
     - name: executing war
       shell: java -jar /tmp/gamefolder/gameoflife-0.0.1.war
