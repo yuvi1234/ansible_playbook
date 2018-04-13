@@ -22,6 +22,6 @@
         src: "{{ workspace }}/gameoflife-0.0.1.war"
         dest: "/tmp/gamefolder"
 
-     - name: executing war
-       shell: java -jar /tmp/gamefolder/gameoflife-0.0.1.war
-       become: true
+    - name: executing war
+      shell: java -jar /tmp/gamefolder/gameoflife-0.0.1.war
+      become: true
