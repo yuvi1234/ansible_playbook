@@ -1,0 +1,2 @@
+[dev]
+dev1 ansible_ssh_host=13.58.40.65
