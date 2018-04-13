@@ -1,0 +1,26 @@
+---
+- hosts: dev
+  tasks:
+    - name: creating a directory
+	  file:
+	    path: /tmp/gamefolder
+		state: directory
+	
+	- name: check for backup
+	  stat: 
+	    path: /tmp/gamefolder
+	  register: abc
+	
+	- name: remove files in a directory
+	  file: 
+	    path: /tmp/gamefolder/
+		state: absent
+		
+    - name: copy war file 
+	  copy: 
+	  src: "{{ workspace }}/gameoflife-0.0.1.war"
+	  dest: "/tmp/gamefolder"
+	
+	- name: executing war
+	  shell: java -jar /tmp/gamefolder/gameoflife-0.0.1.war
+	  become: true
