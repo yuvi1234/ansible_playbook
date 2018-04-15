@@ -15,6 +15,7 @@
       copy: 
         src: "{{ workspace }}/gameoflife-0.0.1-releases.war"
         dest: "/tmp/gamefolder/gameoflife-0.0.1.war"
+        mode: 0777
 
     - name: executing war
       shell: java -jar /tmp/gamefolder/gameoflife-0.0.1.war
