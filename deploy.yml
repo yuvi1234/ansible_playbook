@@ -19,5 +19,5 @@
         mode: 0777
 
     - name: executing war
-      shell: java -jar /tmp/gamefolder/gameoflife-0.0.1.war
+      shell: "cd /tmp/gamefolder/; nohup java -jar gameoflife-0.0.1.war "
       become: true
