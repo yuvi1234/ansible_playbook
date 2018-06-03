@@ -13,7 +13,7 @@
 
     - name: copy war file 
       copy: 
-        src: "{{ workspace }}/gameoflife-0.0.1-releases.war"
+        src: "{{ workspace }}/gameoflife-0.0.1.war"
         dest: "/tmp/gamefolder/gameoflife-0.0.1.war"
         mode: 0777
 
