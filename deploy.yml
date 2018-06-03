@@ -1,6 +1,7 @@
 ---
 - hosts: dev
   gather_facts: no
+  become: ture
   tasks:
     - name: Install Java
       shell: yum install java-1.8.0-openjdk -y
